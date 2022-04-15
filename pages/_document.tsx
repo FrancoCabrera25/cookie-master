@@ -1,16 +1,16 @@
 import Document, {
   DocumentContext,
   Html,
+  Head,
   Main,
   NextScript,
 } from "next/document";
-import Head from "next/head";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
+    const initalProps = await Document.getInitialProps(ctx);
 
-    return initialProps;
+    return initalProps;
   }
 
   render() {
@@ -21,6 +21,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <link rel="shortcut icon" href="/favicon.ico"  />
         </Head>
         <body>
           <Main />
